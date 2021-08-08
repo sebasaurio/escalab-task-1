@@ -1,8 +1,7 @@
-.episodes-list{
-    width: 80%;
+.episodes{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: center;
+    align-items: center;
 }

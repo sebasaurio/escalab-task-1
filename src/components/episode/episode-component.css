@@ -1,0 +1,24 @@
+.episode{
+    width: 100%;
+    border-style: solid;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+    color: black;
+    box-shadow: 10px 10px rgba(9, 92, 22, 0.603);
+    transition: all .4s ease;
+    margin-bottom: 15px;
+}
+
+.episode:hover {
+    border-radius: 0% 0% 20% 20% / 0% 0% 5% 5% ;
+    box-shadow: 10px 10px rgba(17, 168, 40, 0.603);
+  }
+
+.title{
+    font-size: 30px;
+    margin-bottom: -1px;
+}
+
+.air-date{
+    font-size: 20px;
+    max-width: 10%;
+}
