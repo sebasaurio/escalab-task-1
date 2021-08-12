@@ -8,10 +8,6 @@ import Episode from './pages/episode/episode-component';
 import './App.css';
 
 class App extends React.Component{
-  constructor(){
-    super()
-  }
-
   render(){
     return(
       <div className="App">

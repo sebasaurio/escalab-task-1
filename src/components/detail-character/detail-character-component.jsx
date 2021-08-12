@@ -1,9 +1,15 @@
-import React from 'react'
+import './detail-character-component.css'
 
-const DetailCharacter = ({character}) => {
+const DetailCharacter = ({name, status, gender}) => {
     return (
-        <div>
-            Personaje seleccionado
+        <div className='detail'>
+            <div className='detail-title'>
+                <h3>{name}</h3>
+            </div>
+            <div className='detail-info'>
+                <span>{status}</span>
+                <span>{gender}</span>
+            </div>
         </div>
     )
 }
