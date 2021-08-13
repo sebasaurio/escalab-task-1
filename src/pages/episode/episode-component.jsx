@@ -15,9 +15,16 @@ class Episode extends React.Component{
         }
     }
 
-    handleOnClick = (event) =>{
-        console.log(event.target)
-        console.log("sadsadsadsad")
+    handleOnClick = (id) =>{
+        //const episode = this.state.episodes.find(x => x.id === id)
+        //episode.markedAsViewed = !episode.markedAsViewed
+
+        this.setState({episodes: this.state.episodes.map(
+            episode => 
+                episode.id === id 
+                ? {...episode, markedAsViewed : !episode.markedAsViewed}
+                : {...episode}
+            )})
     }
 
     render(){

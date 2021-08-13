@@ -6,6 +6,7 @@
     box-shadow: 10px 10px rgba(9, 92, 22, 0.603);
     transition: all .4s ease;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .episode:hover {
@@ -21,4 +22,10 @@
 .air-date{
     font-size: 20px;
     max-width: 10%;
+}
+
+.viewed-image{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
