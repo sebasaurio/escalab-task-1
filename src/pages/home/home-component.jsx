@@ -18,10 +18,13 @@ class Home extends React.Component{
         }
     }
 
-    handleFavorite = id => { 
-        const character = this.state.characters.find(x=> x.id === id)
-        character.isFavorite = !character.isFavorite
-        this.setState([...this.state.characters, character])
+    handleFavorite = (id) => { 
+        this.setState({characters: this.state.characters.map((character) => 
+            character.id === id
+            ? {...character, isFavorite: !character.isFavorite}
+            : {...character, isFavorite: false}    
+        )})
+
     }
 
     handleClick = (id) => {
@@ -39,7 +42,10 @@ class Home extends React.Component{
     render(){
         return(
             <div className='home'>
-                <MainCharacters characters={this.state.characters} handleFavorite={this.handleFavorite} handleClick={this.handleClick}/>
+                <MainCharacters 
+                    characters={this.state.characters} 
+                    handleFavorite={this.handleFavorite} 
+                    handleClick={this.handleClick}/>
                 {
                     this.state.showDetail 
                     && <DetailCharacter 
@@ -47,7 +53,9 @@ class Home extends React.Component{
                         status={this.state.character.status} 
                         gender={this.state.character.gender}
                         species={this.state.character.species}
-                        origin={this.state.character.origin}/>
+                        created={this.state.character.created}
+                        origin={this.state.character.origin}
+                        information={this.state.character.information}/>
                 }
             </div>
         )}

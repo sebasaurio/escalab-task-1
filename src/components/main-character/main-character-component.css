@@ -1,6 +1,7 @@
 .card-item {
     flex-basis: 10%;
     margin: 0 10px 0 10px;
+    position: relative;
 }
 
 .detailed{
@@ -8,6 +9,13 @@
     border-color: green;
 }
 
-.favorite{
-    
+.is-favorite{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    box-shadow:
+    0 0 10px 5px #fff,  /* inner white */
+    0 0 10px 5px #f0f, /* middle magenta */
+    0 0 10px 5px #0ff; /* outer cyan */
 }
