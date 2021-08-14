@@ -10,8 +10,8 @@ const Episodes = ({episodes, handleOnClick}) => (
             <span>Press double click to set as viewed</span>
         </div>
         {
-            episodes.map(( {id, ...otherProps} ) => (
-                <Episode key={id} id={id} {...otherProps} handleOnClick={handleOnClick}/>
+            episodes.map(( {id, ...otherEpisodeProps} ) => (
+                <Episode key={id} id={id} {...otherEpisodeProps} handleOnClick={handleOnClick}/>
             ))
         }
     </div>

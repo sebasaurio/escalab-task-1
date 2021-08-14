@@ -7,13 +7,13 @@ import './main-characters-component.css'
 const MainCharacters = ({characters, handleFavorite, handleClick}) => (
     <div className='card'>
         {
-            characters.map(( {id, ...otherProps} ) => (
+            characters.map(( {id, ...otherCharacterProps} ) => (
                 <MainCharacter 
                     key={id} 
                     id={id} 
                     handleFavorite={handleFavorite}
                     handleClick={handleClick}
-                    {...otherProps} 
+                    {...otherCharacterProps} 
                         />
             ))
         }
