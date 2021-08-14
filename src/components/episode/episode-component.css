@@ -7,6 +7,10 @@
     transition: all .4s ease;
     margin-bottom: 15px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .episode:hover {
@@ -21,7 +25,8 @@
 
 .air-date{
     font-size: 20px;
-    max-width: 10%;
+    max-width: 40%;
+    margin-top: 10px;
 }
 
 .viewed-image{

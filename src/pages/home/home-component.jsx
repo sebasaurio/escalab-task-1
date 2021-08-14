@@ -18,6 +18,22 @@ class Home extends React.Component{
         }
     }
 
+    componentDidMount(){
+        setTimeout(()=> {
+            const randomId = Math.floor((Math.random()*this.state.characters.length))
+            this.setState({characters: this.state.characters.map((character) => 
+                character.id === randomId
+                ? {...character, isFavorite: true}
+                : {...character, isFavorite: false}    
+            )})
+
+            this.setState({
+                character: this.state.characters.find(character => character.id === randomId),
+                showDetail: true
+            })
+        }, 1000)
+    }
+
     handleFavorite = (id) => { 
         this.setState({characters: this.state.characters.map((character) => 
             character.id === id
